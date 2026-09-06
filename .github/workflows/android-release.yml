@@ -45,7 +45,9 @@ jobs:
 
       - name: Build Android APKs
         working-directory: android
-        run: ./gradlew assembleDebug assembleRelease --no-daemon --stacktrace
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug assembleRelease --no-daemon --stacktrace
 
       - name: Prepare APK files
         run: |
