@@ -10,6 +10,12 @@ export default defineConfig({
     react(),
     legacy()
   ],
+  css: {
+    transformer: 'postcss'
+  },
+  build: {
+    cssMinify: 'esbuild'
+  },
   test: {
     globals: true,
     environment: 'jsdom',
